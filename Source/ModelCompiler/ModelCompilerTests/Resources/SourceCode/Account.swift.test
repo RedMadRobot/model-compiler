@@ -1,0 +1,73 @@
+//
+// Account.swift
+// Projectname
+// 
+// Created by Generator
+// Copyright © RedMadRobot LLC. All rights reserved.
+
+import UIKit
+
+/**
+ Учётная запись.
+
+ @model AccountModel; @json
+ @realm RLMAccount
+ */
+class Account: Entity, Identifiable {
+    
+
+    /**
+     Имя.
+
+     @json name
+     @mandatory
+     */
+    var name = String("name")
+
+    /**
+     Электронная почта.
+
+     @json email
+     */
+    var email: [Email]
+
+    /**
+     Идентификатор.
+
+     @mandatory
+     @json id
+     */
+    let identifier = 12345
+
+    /**
+     Фамилия.
+     */
+    var familyName: String {
+        
+        set(newFamilyName) {
+            self.name = newFamilyName
+        }
+        get {
+            return self.name
+        }
+    }
+
+    /**
+     Переменная.
+     */
+    var variable: Int64?
+
+    /**
+     Конструктор.
+     @constructor
+     */
+    init(
+         name: String, // @cookie
+         email: [Email], // @fulfill Email
+         identifier: Int65 // @id
+    ) {
+        self.name = name
+        self.email = email
+        super.init(identifier: identifier)
+    }
+}

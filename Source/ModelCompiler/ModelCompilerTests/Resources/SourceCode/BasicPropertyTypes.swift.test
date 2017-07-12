@@ -1,0 +1,80 @@
+import UIKit
+
+/**
+ Different types of properties
+ */
+class BasicPropertyTypes {
+    
+    // Explicit types
+    
+    /**
+     doc
+     */
+    let flag: Bool
+    
+    /**
+     doc
+     */
+    var flagOpt: Bool?
+    
+    /**
+     doc
+     */
+    let number: Int16
+
+    /**
+     doc
+     */
+    var numberOpt: Int32?
+
+    /**
+     doc
+     */
+    let decimal: Double
+
+    /**
+     doc
+     */
+    var decimalOpt: Double?
+
+    /**
+     doc
+     */
+    let floating: Float
+
+    /**
+     doc
+     */
+    var floatingOpt: Float?
+
+    /**
+     doc
+     */
+    let line: String
+
+    /**
+     doc
+     */
+    var lineOpt: String?
+
+    /**
+     doc
+     */
+    let date: Date
+
+//    /**
+//     doc
+//     */
+//    var dateOpt: Date?
+//
+//    /**
+//     doc
+//     */
+//    let object: Entity
+//
+//    /**
+//     doc
+//     */
+//    let objectOpt: Entity?
+
+}

@@ -1,0 +1,20 @@
+import Foundation
+
+/**
+ none
+ */
+class SimpleInitialiser {
+    
+    /**
+     name
+     */
+    let name: String
+    
+    /**
+     init
+     */
+    init(name: String) {
+        self.name = name
+    }
+    
+}

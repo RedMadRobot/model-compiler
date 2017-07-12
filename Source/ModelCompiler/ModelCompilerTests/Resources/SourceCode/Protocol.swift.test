@@ -1,0 +1,17 @@
+//
+// Account.swift
+// Projectname
+// 
+// Created by Generator
+// Copyright © RedMadRobot LLC. All rights reserved.
+
+import UIKit
+
+/**
+ Учётная запись.
+
+ @model
+ @realm RLMAccount
+ */
+protocol Account: Entity {
+}
