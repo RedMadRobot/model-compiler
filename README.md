@@ -32,7 +32,7 @@ Framework scan your Swift code to get source code info.
 
 #### Git Submodule:
 
-`git@git.redmadrobot.com:foundation-ios/ModelCompiler.git`
+`git@github.com:RedMadRobot/model-compiler.git`
 
 ## Usage:
 
