@@ -90,7 +90,7 @@ private extension FileFinder {
         let fileManager: FileManager = FileManager()
         let folderContents: [String] = try fileManager.contentsOfDirectory(atPath: folderPath)
         
-        return folderContents.flatMap { (path: String) -> String? in
+        return folderContents.compactMap { (path: String) -> String? in
             var isFolder: ObjCBool = ObjCBool(false)
             let fullPath: String   = folderPath + "/" + path
             
