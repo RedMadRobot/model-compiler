@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02E207DE208DD9620015A11E /* StringTruncateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E207DD208DD9620015A11E /* StringTruncateTests.swift */; };
 		512356791E6989B30090462A /* Account.swift.test in Resources */ = {isa = PBXBuildFile; fileRef = 512356731E6989A40090462A /* Account.swift.test */; };
 		5123567B1E6989B30090462A /* Protocol.swift.test in Resources */ = {isa = PBXBuildFile; fileRef = 512356751E6989A40090462A /* Protocol.swift.test */; };
 		51421C931E66FCC60021D448 /* Typê.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51421C921E66FCC60021D448 /* Typê.swift */; };
@@ -72,6 +73,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02E207DD208DD9620015A11E /* StringTruncateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTruncateTests.swift; sourceTree = "<group>"; };
 		512356731E6989A40090462A /* Account.swift.test */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Account.swift.test; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		512356751E6989A40090462A /* Protocol.swift.test */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Protocol.swift.test; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		51421C921E66FCC60021D448 /* Typê.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Typê.swift"; sourceTree = "<group>"; };
@@ -153,6 +155,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02E207DF208DD96A0015A11E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				02E207DD208DD9620015A11E /* StringTruncateTests.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		5123566E1E6989760090462A /* SourceCode */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,8 +309,9 @@
 		8ABCC0EB1CABE3A1003CCDBA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				51587B341E6DB9100043879D /* Parser */,
 				8ABCC0EE1CABE3E0003CCDBA /* CompilerTests.swift */,
+				02E207DF208DD96A0015A11E /* Helper */,
+				51587B341E6DB9100043879D /* Parser */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -550,6 +561,7 @@
 				5192FC481E812E2F007EEA00 /* ArgumentParserTests.swift in Sources */,
 				8AA288CE1E76CD8A00FE6F97 /* PropertyParserTests.swift in Sources */,
 				8ABCC0EF1CABE3E0003CCDBA /* CompilerTests.swift in Sources */,
+				02E207DE208DD9620015A11E /* StringTruncateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
