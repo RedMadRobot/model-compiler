@@ -39,7 +39,7 @@ public class Compiler {
      utilities for `throw CompilerMessage` line.
      */
     public func compile(files: [SourceCodeFile]) throws -> [Klass] {
-        return try files.flatMap { (file: SourceCodeFile) -> Klass? in
+        return try files.compactMap { (file: SourceCodeFile) -> Klass? in
             return try self.compile(file: file)
         }
     }

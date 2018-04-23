@@ -111,7 +111,7 @@ open class TypeParser {
         // check type ends with ?
         if rawType.hasSuffix("?") {
             return Typê.OptionalType(
-                wrapped: try parse(rawType: String(rawType.characters.dropLast()), declaration: declaration)
+                wrapped: try parse(rawType: String(rawType.dropLast()), declaration: declaration)
             )
         }
         
@@ -156,8 +156,8 @@ open class TypeParser {
         }
         
         var objectTypeName: String = rawType.firstWord()
-        if objectTypeName.characters.last == "?" {
-            objectTypeName = String(objectTypeName.characters.dropLast())
+        if objectTypeName.last == "?" {
+            objectTypeName = String(objectTypeName.dropLast())
         }
         
         if objectTypeName.isEmpty {

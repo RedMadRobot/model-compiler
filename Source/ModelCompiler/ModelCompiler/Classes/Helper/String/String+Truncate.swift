@@ -27,7 +27,7 @@ public extension String {
             return self
         }
         
-        return deleteWord ? substring(from: wordRange.upperBound) : substring(from: wordRange.lowerBound)
+        return deleteWord ? String(self[wordRange.upperBound...]) : String(self[wordRange.lowerBound...])
     }
     
     /**
@@ -46,7 +46,7 @@ public extension String {
             return self
         }
         
-        return deleteWord ? substring(to: wordRange.lowerBound) : substring(to: wordRange.upperBound)
+        return deleteWord ? String(self[..<wordRange.lowerBound]) : String(self[..<wordRange.upperBound])
     }
     
     /**
@@ -113,30 +113,30 @@ public extension String {
      */
     public func truncateLeadingWhitespace() -> String {
         if hasPrefix(" ") {
-            return substring(from: characters.index(startIndex, offsetBy: 1)).truncateLeadingWhitespace()
+            return String(self[index(startIndex, offsetBy: 1)...]).truncateLeadingWhitespace()
         }
         
         if hasPrefix("\n") {
-            return substring(from: characters.index(startIndex, offsetBy: 1)).truncateLeadingWhitespace()
+            return String(self[index(startIndex, offsetBy: 1)...]).truncateLeadingWhitespace()
         }
         
         return self
     }
     
     public func truncateToWordFromBehind(_ word: String, deleteWord: Bool = true) -> String {
-        let drow: String = String(word.characters.reversed())
-        let fles: String = String(self.characters.reversed())
+        let drow: String = String(word.reversed())
+        let fles: String = String(self.reversed())
         
         let cut: String = fles.truncateAllBeforeWord(drow, deleteWord: deleteWord)
-        return String(cut.characters.reversed())
+        return String(cut.reversed())
     }
     
     public func truncateUntilWord(_ word: String) -> String {
-        let drow: String = String(word.characters.reversed())
-        let fles: String = String(self.characters.reversed())
+        let drow: String = String(word.reversed())
+        let fles: String = String(self.reversed())
         
         let cut: String = fles.truncateFromWord(drow, deleteWord: false)
-        return String(cut.characters.reversed())
+        return String(cut.reversed())
     }
     
 }
